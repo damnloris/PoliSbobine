@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invia un pagamento</title>
+    <style>
+        /* Stile generale */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenitore principale */
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Titoli */
+        h1 {
+            font-size: 24px;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #555;
+            margin: 20px 0 10px;
+        }
+
+        /* Pulsante PayPal */
+        .paypal-button {
+            display: inline-block;
+            background-color: #0070ba;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .paypal-button:hover {
+            background-color: #005ea6;
+        }
+
+        /* Link PayPal.me */
+        .paypal-link {
+            color: #0070ba;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .paypal-link:hover {
+            color: #005ea6;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Invia un pagamento</h1>
+        <p>Grazie per il tuo supporto! Puoi inviarmi denaro tramite PayPal cliccando sul pulsante qui sotto.</p>
+        
+        <!-- Bottone PayPal -->
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+            <input type="hidden" name="business" value="tuo@email.com">
+            <input type="hidden" name="no_recurring" value="0">
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="hidden" name="item_name" value="Supporto al mio progetto">
+            <input type="hidden" name="amount" value="1.00">
+            <button class="paypal-button" type="submit">Invia €1,00 con PayPal</button>
+        </form>
+
+        <h2>Oppure usa PayPal.me</h2>
+        <p>
+            <a class="paypal-link" href="https://www.paypal.me/Loris Giovannelli e Andrea Frati" target="_blank">
+                Invia un importo personalizzato
+            </a>
+        </p>
+        
+        <footer>
+            <p>Grazie per il tuo contributo ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
